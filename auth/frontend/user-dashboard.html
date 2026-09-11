@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Welcome</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            overflow: hidden;
+
+            font-family:
+                Inter,
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                sans-serif;
+
+            color: #ffffff;
+
+            background:
+                radial-gradient(
+                    circle at 15% 20%,
+                    rgba(124, 58, 237, 0.25),
+                    transparent 35%
+                ),
+                radial-gradient(
+                    circle at 85% 75%,
+                    rgba(59, 130, 246, 0.20),
+                    transparent 35%
+                ),
+                #050816;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        /* =========================
+           BACKGROUND
+        ========================= */
+
+        .background {
+            position: fixed;
+            inset: 0;
+
+            overflow: hidden;
+
+            pointer-events: none;
+        }
+
+
+        .orb {
+            position: absolute;
+
+            border-radius: 50%;
+
+            filter: blur(80px);
+
+            opacity: 0.45;
+
+            animation:
+                float 10s ease-in-out infinite;
+        }
+
+
+        .orb-one {
+            width: 300px;
+            height: 300px;
+
+            background: #7c3aed;
+
+            top: -100px;
+            left: -80px;
+        }
+
+
+        .orb-two {
+            width: 280px;
+            height: 280px;
+
+            background: #2563eb;
+
+            right: -80px;
+            bottom: -80px;
+
+            animation-delay: -3s;
+        }
+
+
+        .orb-three {
+            width: 180px;
+            height: 180px;
+
+            background: #ec4899;
+
+            top: 45%;
+            left: 50%;
+
+            animation-delay: -6s;
+        }
+
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translate(0, 0);
+            }
+
+            50% {
+                transform: translate(30px, -25px);
+            }
+        }
+
+
+        /* =========================
+           GLASS CARD
+        ========================= */
+
+        .welcome-card {
+
+            position: relative;
+
+            width: min(620px, calc(100% - 40px));
+
+            padding: 70px 55px;
+
+            text-align: center;
+
+            background:
+                rgba(255, 255, 255, 0.055);
+
+            border:
+                1px solid rgba(255, 255, 255, 0.12);
+
+            border-radius: 32px;
+
+            backdrop-filter: blur(25px);
+
+            -webkit-backdrop-filter: blur(25px);
+
+            box-shadow:
+                0 30px 100px rgba(0, 0, 0, 0.45),
+                inset 0 1px 0 rgba(255, 255, 255, 0.08);
+
+            animation: cardIn 0.7s ease forwards;
+        }
+
+
+        @keyframes cardIn {
+
+            from {
+                opacity: 0;
+                transform: translateY(25px) scale(0.97);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+
+        /* =========================
+           LOGO
+        ========================= */
+
+        .logo {
+
+            width: 72px;
+            height: 72px;
+
+            margin: 0 auto 28px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 30px;
+
+            border-radius: 22px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(139, 92, 246, 0.35),
+                    rgba(59, 130, 246, 0.20)
+                );
+
+            border:
+                1px solid rgba(255, 255, 255, 0.15);
+
+            box-shadow:
+                0 15px 40px rgba(124, 58, 237, 0.25);
+        }
+
+
+        /* =========================
+           SMALL LABEL
+        ========================= */
+
+        .eyebrow {
+
+            display: inline-block;
+
+            margin-bottom: 18px;
+
+            font-size: 12px;
+
+            font-weight: 700;
+
+            letter-spacing: 3px;
+
+            color: rgba(255, 255, 255, 0.45);
+        }
+
+
+        /* =========================
+           NAME
+        ========================= */
+
+        h1 {
+
+            font-size: clamp(42px, 7vw, 68px);
+
+            line-height: 1.05;
+
+            font-weight: 700;
+
+            letter-spacing: -2.5px;
+
+            margin-bottom: 18px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #ffffff 20%,
+                    #c4b5fd 55%,
+                    #93c5fd 100%
+                );
+
+            -webkit-background-clip: text;
+            background-clip: text;
+
+            color: transparent;
+        }
+
+
+        /* =========================
+           WELCOME TEXT
+        ========================= */
+
+        .welcome-text {
+
+            font-size: 18px;
+
+            line-height: 1.7;
+
+            color:
+                rgba(255, 255, 255, 0.58);
+
+            max-width: 450px;
+
+            margin: 0 auto 38px;
+        }
+
+
+        .welcome-text strong {
+
+            color: rgba(255, 255, 255, 0.88);
+
+            font-weight: 600;
+        }
+
+
+        /* =========================
+           USER INFO
+        ========================= */
+
+        .user-info {
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            gap: 10px;
+
+            margin-bottom: 35px;
+
+            font-size: 14px;
+
+            color:
+                rgba(255, 255, 255, 0.42);
+        }
+
+
+        .status-dot {
+
+            width: 8px;
+            height: 8px;
+
+            border-radius: 50%;
+
+            background: #4ade80;
+
+            box-shadow:
+                0 0 12px rgba(74, 222, 128, 0.8);
+        }
+
+
+        /* =========================
+           LOGOUT
+        ========================= */
+
+        .logout-btn {
+
+            width: 100%;
+            max-width: 220px;
+
+            padding: 15px 25px;
+
+            border: 1px solid
+                rgba(255, 255, 255, 0.13);
+
+            border-radius: 14px;
+
+            background:
+                rgba(255, 255, 255, 0.07);
+
+            color: white;
+
+            font-size: 14px;
+
+            font-weight: 600;
+
+            cursor: pointer;
+
+            transition:
+                0.25s ease;
+        }
+
+
+        .logout-btn:hover {
+
+            background:
+                rgba(255, 255, 255, 0.13);
+
+            border-color:
+                rgba(255, 255, 255, 0.25);
+
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 12px 30px
+                rgba(0, 0, 0, 0.25);
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        .footer {
+
+            position: fixed;
+
+            bottom: 25px;
+            left: 0;
+            right: 0;
+
+            text-align: center;
+
+            font-size: 11px;
+
+            letter-spacing: 2px;
+
+            color:
+                rgba(255, 255, 255, 0.22);
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 600px) {
+
+            .welcome-card {
+
+                padding: 50px 25px;
+
+                border-radius: 25px;
+            }
+
+
+            h1 {
+
+                font-size: 42px;
+
+                letter-spacing: -1.5px;
+            }
+
+
+            .welcome-text {
+
+                font-size: 16px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- Background -->
+
+    <div class="background">
+
+        <div class="orb orb-one"></div>
+
+        <div class="orb orb-two"></div>
+
+        <div class="orb orb-three"></div>
+
+    </div>
+
+
+    <!-- Welcome -->
+
+    <main class="welcome-card">
+
+        <div class="logo">
+            ◈
+        </div>
+
+
+        <span class="eyebrow">
+            JUNED.OS
+        </span>
+
+
+        <h1 id="welcomeName">
+            Welcome
+        </h1>
+
+
+        <p class="welcome-text">
+
+            Welcome back,
+            <strong id="welcomeTextName">
+                User
+            </strong>.
+
+            <br>
+
+            You have successfully signed in
+            to your account.
+
+        </p>
+
+
+        <div class="user-info">
+
+            <span class="status-dot"></span>
+
+            <span>
+                Account active
+            </span>
+
+        </div>
+
+
+        <button
+            id="logoutBtn"
+            class="logout-btn"
+        >
+            Logout
+        </button>
+
+    </main>
+
+
+    <div class="footer">
+        SECURE USER SESSION · 2026
+    </div>
+
+
+    <script>
+
+        // =====================================
+        // Authentication check
+        // =====================================
+
+        const token =
+            localStorage.getItem("token");
+
+        const userData =
+            localStorage.getItem("user");
+
+
+        if (!token || !userData) {
+
+            window.location.href =
+                "/login.html";
+
+        }
+
+
+        let user;
+
+
+        try {
+
+            user =
+                JSON.parse(userData);
+
+        } catch (error) {
+
+            localStorage.removeItem("token");
+
+            localStorage.removeItem("user");
+
+            window.location.href =
+                "/login.html";
+
+        }
+
+
+        // =====================================
+        // Display name
+        // =====================================
+
+        if (user && user.name) {
+
+            document.getElementById(
+                "welcomeName"
+            ).textContent =
+                `Welcome, ${user.name}`;
+
+            document.getElementById(
+                "welcomeTextName"
+            ).textContent =
+                user.name;
+
+        }
+
+
+        // =====================================
+        // Logout
+        // =====================================
+
+        document
+            .getElementById("logoutBtn")
+            .addEventListener(
+                "click",
+                () => {
+
+                    localStorage.removeItem(
+                        "token"
+                    );
+
+                    localStorage.removeItem(
+                        "user"
+                    );
+
+                    window.location.href =
+                        "/login.html";
+
+                }
+            );
+
+    </script>
+
+
+</body>
+
+</html>

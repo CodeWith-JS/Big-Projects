@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Create Account | GlassAuth</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <!-- Background -->
+    <div class="background">
+
+        <div class="orb orb-one"></div>
+        <div class="orb orb-two"></div>
+        <div class="orb orb-three"></div>
+
+    </div>
+
+
+    <!-- Registration -->
+    <main class="glass-container">
+
+        <div class="glass-card">
+
+            <div class="logo">
+                ◈
+            </div>
+
+            <h1>Create Account</h1>
+
+            <p class="subtitle">
+                Join us and get started
+            </p>
+
+
+            <form id="registerForm">
+
+                <!-- Name -->
+                <div class="input-group">
+
+                    <label for="name">
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Enter your name"
+                        autocomplete="name"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Email -->
+                <div class="input-group">
+
+                    <label for="email">
+                        Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="you@example.com"
+                        autocomplete="email"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Password -->
+                <div class="input-group">
+
+                    <label for="password">
+                        Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Minimum 6 characters"
+                        autocomplete="new-password"
+                        minlength="6"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Confirm Password -->
+                <div class="input-group">
+
+                    <label for="confirmPassword">
+                        Confirm Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="confirmPassword"
+                        placeholder="Confirm your password"
+                        autocomplete="new-password"
+                        minlength="6"
+                        required
+                    >
+
+                </div>
+
+
+                <button type="submit">
+                    Create Account
+                </button>
+
+
+                <p id="message"></p>
+
+            </form>
+
+
+            <div class="divider">
+                <span>OR</span>
+            </div>
+
+
+            <p class="register">
+
+                Already have an account?
+
+                <a href="login.html">
+                    Sign in
+                </a>
+
+            </p>
+
+        </div>
+
+    </main>
+
+
+    <script src="./js/register.js"></script>
+
+</body>
+
+</html>

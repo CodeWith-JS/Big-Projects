@@ -31,7 +31,7 @@ The app follows the **MVVM (Model-View-ViewModel)** pattern. The UI observes dat
 ## Package Structure
 
 ```
-dev.atharvakulkarni.e_commerce
+dev.e_commerce
 ├── data
 │   ├── model        # Model classes
 │   ├── network/api  # Retrofit API endpoints
